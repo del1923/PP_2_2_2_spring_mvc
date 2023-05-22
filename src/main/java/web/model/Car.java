@@ -1,12 +1,19 @@
-package web.controller;
+package web.model;
 
 public class Car {
-    private String mark;
-    private int model;
-    private String color;
-    private int yearOfRelease;
+    private String mark;        //марка
+    private int model;          //модель
+    private String color;       //цвет
+    private int yearOfRelease;  //год выпуска
 
     public Car() {
+    }
+
+    public Car(String mark, int model, String color, int yearOfRelease) {
+        this.mark = mark;
+        this.model = model;
+        this.color = color;
+        this.yearOfRelease = yearOfRelease;
     }
 
     public String getMark() {
