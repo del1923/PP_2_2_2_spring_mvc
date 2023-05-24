@@ -12,13 +12,19 @@ public class CarDaoImpl implements CarDao{
 
     static {
         carList.add(new Car("LADA", 2107, "красный", 2010));
-        /*
-        добавить ещё 4 шт!
-         */
+        carList.add(new Car("Москвич", 2141, "белый", 1980));
+        carList.add(new Car("VOLVO", 60, "синий", 2007));
+        carList.add(new Car("ГАЗ", 2410, "зелёный", 1985));
+        carList.add(new Car("Mercedes", 600, "чёрный", 2015));
+
     }
 
     @Override
     public List<Car> getCars(int count) {
+        if ( count == 0 ) {
+            return carList;
+        }
+
         /*
         нужно проверить сколько записей возвращать
          */
