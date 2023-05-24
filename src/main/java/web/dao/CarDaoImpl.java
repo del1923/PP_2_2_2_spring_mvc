@@ -17,13 +17,11 @@ public class CarDaoImpl implements CarDao{
          */
     }
 
-
-
     @Override
     public List<Car> getCars(int count) {
         /*
         нужно проверить сколько записей возвращать
          */
-        return null;
+        return null; //вернуть List авто количеством указанным в count
     }
 }
