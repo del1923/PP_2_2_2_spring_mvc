@@ -16,9 +16,6 @@ public class CarController {
     @GetMapping("/cars")
     public String carsPage(@RequestParam(value = "count", required = false) int count , Model model) {
         model.addAttribute( "cars", carService.getCars(count) );
-
-        //добавить передачу в вид списка авто
-
         return "cars";
     }
 }
