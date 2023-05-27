@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.ArrayList;
 import java.util.List;
 
+
 @Controller
 public class HelloController {
 
@@ -17,7 +18,10 @@ public class HelloController {
 		messages.add("Hello!");
 		messages.add("I'm Spring MVC application");
 		messages.add("5.2.0 version by sep'19 ");
+		messages.add("Я вывожу список моделей авто");
+		messages.add("c маркой, цветом и годом выпуска");
 		model.addAttribute("messages", messages);
+
 		return "index";
 	}
 	

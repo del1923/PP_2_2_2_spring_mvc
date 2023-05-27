@@ -16,18 +16,13 @@ public class CarDaoImpl implements CarDao{
         carList.add(new Car("VOLVO", 60, "синий", 2007));
         carList.add(new Car("ГАЗ", 2410, "зелёный", 1985));
         carList.add(new Car("Mercedes", 600, "чёрный", 2015));
-
     }
 
     @Override
     public List<Car> getCars(int count) {
-        if ( count == 0 ) {
+        if ((count == 0 ) || (count > carList.size()) ) {
             return carList;
         }
-
-        /*
-        нужно проверить сколько записей возвращать
-         */
-        return null; //вернуть List авто количеством указанным в count
+        return carList.subList( 0, count );
     }
 }
